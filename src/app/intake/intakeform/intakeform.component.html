@@ -1,0 +1,69 @@
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+  <p class="h4 mb-4">JDS Intake Form</p>
+
+  <!-- Name -->
+  <input type="text" formControlName="agencyname" id="defaultContactFormName" mdbInput
+    class="form-control mb-4" placeholder="Name">
+
+  <!-- Email -->
+  <input type="email" formControlName="email" id="defaultContactFormEmail" mdbInput
+    class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Subject -->
+  <label>Agency Contact</label>
+  <select formControlName="agencycontactname" class="browser-default custom-select mb-4">
+    <option value="John Smith" disabled>John Smith</option>
+    <option value="Paula White" selected>Paula White</option>
+    <option value="John Q">John Q</option>
+    <option value="Jane Doe">Jane Doe</option>
+    <option value="James Brown">James Brown</option>
+  </select>
+
+  <!-- Message -->
+  <input type="text" formControlName="phonenumber" id="defaultContactFormName" mdbInput
+    class="form-control mb-4" placeholder="Phone Number">
+
+  <!-- Copy -->
+  <input type="text" formControlName="contactnumber" id="defaultContactFormName" mdbInput
+    class="form-control mb-4" placeholder="Contact Number">
+
+    <label>Please indicate the area(s) in which you are contracted to provide services</label>
+    <select formControlName="employmenttraining" class="browser-default custom-select mb-4">
+      <option value="Job Readiness" disabled>Job Readiness</option>
+      <option value="Sector Specific Training" selected>Sector Specific Training</option>
+      <option value="Job Placement">Job Placement</option>
+      <option value="Job Retention Support">Job Retention Support</option>
+      <option value="Wraparound Services">Wraparound Services</option>
+    </select>
+
+    <label>Eligibility Criteria: Age</label>
+    <input type="text" formControlName="eligibilityage" id="defaultContactFormName" mdbInput
+    class="form-control mb-4" placeholder="Eligibility Criteria: Age">
+
+    <label>Eligibility Criteria: Disengaged Area</label>
+    <input type="text" formControlName="eligibilityarea" id="defaultContactFormName" mdbInput
+    class="form-control mb-4" placeholder="Eligibility Criteria: Disengaged Area">
+
+    <label>Demographic: Gender</label>
+    <select formControlName="demographicgender" class="browser-default custom-select mb-4">
+      <option value="Male" disabled>Male</option>
+      <option value="Female" selected>Female</option>
+    </select>
+
+    <label>Demographic: Ethnicity</label>
+    <select formControlName="demographicethnicity" class="browser-default custom-select mb-4">
+      <option value="Black" disabled>Black</option>
+      <option value="White" selected>White</option>
+      <option value="Latino" selected>Latino</option>
+      <option value="Asian" selected>Asian</option>
+      <option value="Native American" selected>Native American</option>
+    </select>
+
+  <!-- Send button -->
+  <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+    mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+
+</form>
+<!-- Default form contact -->

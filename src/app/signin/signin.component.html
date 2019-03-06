@@ -1,0 +1,61 @@
+<!-- <div class="authBlock">
+  <h3>Sign In</h3>
+  <div class="formGroup">
+    <input type="text" class="formControl" placeholder="Username" #email required>
+  </div>
+  <div class="formGroup">
+    <input type="password" class="formControl" placeholder="Password" #password required>
+  </div>
+   Calling SignIn Api from AuthenticationService
+  <div class="formGroup">
+    <input type="button" class="btn btnPrimary" value="Log in" (click)="authenticationService.SignIn(email.value, password.value)">
+  </div>
+  <div class="md-form">
+    <input mdbInput type="text" id="form1" class="form-control">
+    <label for="form1" class="">Example label</label>
+  </div>
+</div> -->
+
+
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" [formGroup]="contactForm">
+
+  <p class="h4 mb-4">Login</p>
+
+  <!-- Name -->
+  <input type="text" formControlName="email" id="defaultContactFormName" mdbInput
+    class="form-control mb-4" placeholder="Email">
+
+  <!-- Email -->
+  <input type="password" formControlName="password" id="defaultContactFormEmail" mdbInput
+    class="form-control mb-4" placeholder="password">
+
+  <!-- Subject -->
+  <!-- <label>Subject</label>
+  <select formControlName="contactFormSubjects" class="browser-default custom-select mb-4">
+    <option value="" disabled>Choose option</option>
+    <option value="1" selected>Feedback</option>
+    <option value="2">Report a bug</option>
+    <option value="3">Feature request</option>
+    <option value="4">Feature request</option>
+  </select> -->
+
+  <!-- Message -->
+  <!-- <div class="form-group">
+    <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
+      rows="3" placeholder="Message"></textarea>
+  </div> -->
+
+  <!-- Copy -->
+  <!-- <div class="custom-control custom-checkbox mb-4">
+    <input formControlName="contactFormCopy" type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+    <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+  </div> -->
+
+  <!-- Send button -->
+  <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+    mdbWavesEffect type="submit" (click)="trySignIn(contactForm.value)" [disabled]="disabledSubmitButton">Send</button>
+
+</form>
+<span>Don't have an account? <a href="/signup">Create an account</a></span>
+<!-- Default form contact -->

@@ -3,11 +3,12 @@
   "version": "7.4.2",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -16,18 +17,26 @@
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
     "@angular/core": "~7.0.0",
+    "@angular/fire": "^5.1.1",
     "@angular/forms": "~7.0.0",
     "@angular/http": "~7.0.0",
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "@fortawesome/fontawesome-free": "^5.6.3",
+    "angular-bootstrap-md": "file:angular-bootstrap-md-7.4.2.tgz",
     "angular-calendar": "^0.25.2",
     "chart.js": "^2.7.3",
     "core-js": "^2.5.4",
+    "firebase": "^5.8.5",
+    "node-sass": "^4.11.0",
     "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26",
-    "angular-bootstrap-md": "file:angular-bootstrap-md-7.4.2.tgz"
+    "webpack": "^4.29.6",
+    "zone.js": "~0.8.26"
+  },
+  "engines": {
+    "node": "8.11.4",
+    "npm": "5.6.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.11.3",

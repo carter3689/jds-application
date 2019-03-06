@@ -7,16 +7,34 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes.service';
 
+import {AuthenticationService} from './authentication.service'
+import { AngularFirestore } from '@angular/fire/firestore';
+
 import { ViewsModule } from './views/views.module';
 import { SharedModule } from './shared/shared.module';
 import { ErrorModule } from './views/errors/error.module';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import {AngularFireAuth} from '@angular/fire/auth'
+
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
+import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
+import { IntakeformComponent } from './intake/intakeform/intakeform.component';
+import { AngularFireDatabase} from '@angular/fire/database';
+import { YouthlistComponent } from './youthlist/youthlist.component';
+import { LogoutComponent } from './logout/logout.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignupComponent,
+    SigninComponent,
+    IntakeformComponent,
+    YouthlistComponent,
+    LogoutComponent
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -32,9 +50,11 @@ import { NavigationModule } from './main-layout/navigation/navigation.module';
     ViewsModule,
     ErrorModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
+    
   ],
-  providers: [],
+  providers: [AuthenticationService,AngularFireAuth,AngularFireDatabase,AngularFirestore],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })

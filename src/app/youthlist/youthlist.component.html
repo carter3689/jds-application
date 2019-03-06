@@ -1,0 +1,17 @@
+<table mdbTable striped="true">
+  <thead>
+    <tr>
+      <th  scope="col">Contacts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let item of items | async">
+      <th scope="row">{{item.agencycontactname}}</th>
+      <td>{{item.agencyname}}</td>
+      <td>{{item.contactnumber}}</td>
+      <td>{{item.date}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.phonenumber}}</td>
+    </tr>
+  </tbody>
+</table>

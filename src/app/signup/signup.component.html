@@ -1,0 +1,16 @@
+<form class="text-center border border-light p-5" [formGroup]="registerForm">
+
+  <p class="h4 mb-4">Sign Up</p>
+
+  <!-- Name -->
+  <input type="text" formControlName="email" id="defaultContactFormName" mdbInput
+    class="form-control mb-4" placeholder="Email">
+
+  <!-- Email -->
+  <input type="password" formControlName="password" id="defaultContactFormEmail" mdbInput
+    class="form-control mb-4" placeholder="password">
+
+    <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+    mdbWavesEffect type="submit" (click)="tryRegister(registerForm.value)">Send</button>
+
+</form>

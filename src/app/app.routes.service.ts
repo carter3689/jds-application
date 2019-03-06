@@ -7,10 +7,21 @@ import { RouterModule, Route } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { NotFoundComponent } from './views/errors/not-found/not-found.component';
 import { Dashboard1Component } from './views/dashboards/dashboard1/dashboard1.component';
+import {SigninComponent} from './signin/signin.component'
+import {SignupComponent} from './signup/signup.component'
+import {YouthlistComponent} from './youthlist/youthlist.component'
+import {IntakeformComponent} from './intake/intakeform/intakeform.component'
+import {LogoutComponent} from './logout/logout.component'
+// import { AuthGuard } from './core/auth.guard';
 
 
 const routes: Route[] = [
-  { path: '', pathMatch: 'full', redirectTo: 'dashboards/v1' },
+  { path: '', pathMatch: 'full', redirectTo: '/login' },
+  {path:'login', component:SigninComponent, pathMatch:'full' },
+  {path:'signup', component:SignupComponent, pathMatch:'full' },
+  {path:'youth', component:YouthlistComponent, pathMatch:'full'},
+  {path:'intake', component:IntakeformComponent, pathMatch:'full'},
+  {path:'logout', component:LogoutComponent, pathMatch:'full' },
   { path: 'dashboards', children:
     [
       { path: 'v1', component: Dashboard1Component },
