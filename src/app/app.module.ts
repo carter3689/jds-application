@@ -25,7 +25,8 @@ import { SigninComponent } from './signin/signin.component';
 import { IntakeformComponent } from './intake/intakeform/intakeform.component';
 import { AngularFireDatabase} from '@angular/fire/database';
 import { YouthlistComponent } from './youthlist/youthlist.component';
-import { LogoutComponent } from './logout/logout.component'
+import { LogoutComponent } from './logout/logout.component';
+import { RequestformComponent } from './requestform/requestform.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LogoutComponent } from './logout/logout.component'
     SigninComponent,
     IntakeformComponent,
     YouthlistComponent,
-    LogoutComponent
+    LogoutComponent,
+    RequestformComponent
   ],
   imports: [
     AgmCoreModule.forRoot({

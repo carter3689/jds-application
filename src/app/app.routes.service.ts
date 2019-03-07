@@ -12,6 +12,7 @@ import {SignupComponent} from './signup/signup.component'
 import {YouthlistComponent} from './youthlist/youthlist.component'
 import {IntakeformComponent} from './intake/intakeform/intakeform.component'
 import {LogoutComponent} from './logout/logout.component'
+import {RequestformComponent} from './requestform/requestform.component'
 // import { AuthGuard } from './core/auth.guard';
 
 
@@ -21,6 +22,7 @@ const routes: Route[] = [
   {path:'signup', component:SignupComponent, pathMatch:'full' },
   {path:'youth', component:YouthlistComponent, pathMatch:'full'},
   {path:'intake', component:IntakeformComponent, pathMatch:'full'},
+  {path:'request', component:RequestformComponent, pathMatch:'full'},
   {path:'logout', component:LogoutComponent, pathMatch:'full' },
   { path: 'dashboards', children:
     [
