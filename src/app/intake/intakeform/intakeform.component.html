@@ -1,69 +1,107 @@
 <!-- Default form contact -->
 <form class="text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
 
-  <p class="h4 mb-4">JDS Intake Form</p>
+  <h1 class="h4 mb-4">Agency Form</h1>
+  <hr>
 
+  <h3>NEW AGENCY REGISTRATION FORM</h3>
   <!-- Name -->
+  <div class="labelstyle">
+    <label>Name</label>
   <input type="text" formControlName="agencyname" id="defaultContactFormName" mdbInput
     class="form-control mb-4" placeholder="Name">
+    </div>
 
   <!-- Email -->
+  <div class="labelstyle">
+    <label>Email</label>
   <input type="email" formControlName="email" id="defaultContactFormEmail" mdbInput
     class="form-control mb-4" placeholder="E-mail">
+    </div>
 
   <!-- Subject -->
+  <div class="labelstyle">
   <label>Agency Contact</label>
   <select formControlName="agencycontactname" class="browser-default custom-select mb-4">
+    <option value="" disabled selected hidden>Please Select Your Contact...</option>
     <option value="John Smith" disabled>John Smith</option>
     <option value="Paula White" selected>Paula White</option>
     <option value="John Q">John Q</option>
     <option value="Jane Doe">Jane Doe</option>
     <option value="James Brown">James Brown</option>
   </select>
+  </div>
 
   <!-- Message -->
+  <div class="labelstyle">
+    <label>Phone Number</label>
   <input type="text" formControlName="phonenumber" id="defaultContactFormName" mdbInput
     class="form-control mb-4" placeholder="Phone Number">
-
+    </div>
   <!-- Copy -->
+  <div class="labelstyle">
+    <label>Contact Number</label>
   <input type="text" formControlName="contactnumber" id="defaultContactFormName" mdbInput
     class="form-control mb-4" placeholder="Contact Number">
+    </div>
 
+    <div class="labelstyle">
     <label>Please indicate the area(s) in which you are contracted to provide services</label>
     <select formControlName="employmenttraining" class="browser-default custom-select mb-4">
+        <option value="" disabled selected hidden>Area of services...</option>
       <option value="Job Readiness" disabled>Job Readiness</option>
       <option value="Sector Specific Training" selected>Sector Specific Training</option>
       <option value="Job Placement">Job Placement</option>
       <option value="Job Retention Support">Job Retention Support</option>
       <option value="Wraparound Services">Wraparound Services</option>
     </select>
+    </div>
 
-    <label>Eligibility Criteria: Age</label>
-    <input type="text" formControlName="eligibilityage" id="defaultContactFormName" mdbInput
-    class="form-control mb-4" placeholder="Eligibility Criteria: Age">
+    <div class="labelstyle">
+      <label>Eligibility Criteria: Age</label>
+      <input type="text" formControlName="eligibilityage" id="defaultContactFormName" mdbInput
+      class="form-control mb-4" placeholder="Eligibility Criteria: Age">
+    </div>
 
+    <div class="labelstyle">
     <label>Eligibility Criteria: Disengaged Area</label>
     <input type="text" formControlName="eligibilityarea" id="defaultContactFormName" mdbInput
     class="form-control mb-4" placeholder="Eligibility Criteria: Disengaged Area">
+      </div>
 
+      <div class="labelstyle">
     <label>Demographic: Gender</label>
     <select formControlName="demographicgender" class="browser-default custom-select mb-4">
+        <option value="" disabled selected hidden>Select Gender</option>
       <option value="Male" disabled>Male</option>
       <option value="Female" selected>Female</option>
     </select>
+    </div>
 
+    <div class="labelstyle">
     <label>Demographic: Ethnicity</label>
     <select formControlName="demographicethnicity" class="browser-default custom-select mb-4">
+        <option value="" disabled selected hidden>Select Ethnicity.</option>
       <option value="Black" disabled>Black</option>
       <option value="White" selected>White</option>
       <option value="Latino" selected>Latino</option>
       <option value="Asian" selected>Asian</option>
       <option value="Native American" selected>Native American</option>
     </select>
+    </div>
+
+    <div class="labelstyle">
+        <label>Are you in need of Job Readiness training?</label>
+        <select formControlName="jobready" class="browser-default custom-select mb-4">
+            <option value="" disabled selected hidden>Please make your selection...</option>
+          <option value="Male" disabled>Yes</option>
+          <option value="Female" selected>No</option>
+        </select>
+        </div>
 
   <!-- Send button -->
   <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
-    mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+    mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Submit</button>
 
 </form>
 <!-- Default form contact -->

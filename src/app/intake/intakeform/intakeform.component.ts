@@ -29,14 +29,15 @@ export class IntakeformComponent implements OnInit {
       'eligibilityage':[''],
       'eligibilityarea':[''],
       'demographicgender':[''],
-      'demographicethnicity':['']
+      'demographicethnicity':[''],
+      'jobready':[''],
       });
    }
 
    onSubmit(){
-    const {agencyname,email,agencycontactname,phonenumber,contactnumber,employmenttraining,eligibilityage,eligibilityarea,demographicgender,demographicethnicity} = this.contactForm.value;
+    const {agencyname,email,agencycontactname,phonenumber,contactnumber,employmenttraining,eligibilityage,eligibilityarea,demographicgender,demographicethnicity,jobready} = this.contactForm.value;
     const date = Date();
-    let formRequest = {agencyname,email,agencycontactname,phonenumber,contactnumber,date,employmenttraining,eligibilityage,eligibilityarea,demographicgender,demographicethnicity};
+    let formRequest = {agencyname,email,agencycontactname,phonenumber,contactnumber,date,employmenttraining,eligibilityage,eligibilityarea,demographicgender,demographicethnicity,jobready};
 
     this.af.list('/intake').push(formRequest)
     this.contactForm.reset();
